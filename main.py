@@ -1,14 +1,9 @@
 import customtkinter
 import random
-import os
-import sys
-
-# program_path = os.path.dirname(sys.executable)
-# word_list_file = os.path.join(program_path, "word_list.txt")
 
 words_list_default = ["алфАвІт",
-                      "бЕшкет", "близькИй", "болотистИй", "борОдавка", "босОніж", "боЯзнь", "бурштинОвий",
-                      "вАги", "вантажІвка", "видАння", "визвОльний", "випАдок", "вирАзний", "вИсіти", "відвезтИ",
+                      "бЕшкет", "близькИй", "болотИстий", "борОдавка", "босОніж", "боЯзнь", "бурштинОвий",
+                      "вАги", "вантажІвка", "видАння", "визвОльний", "вИпадок", "вирАзний", "вИсіти", "відвезтИ",
                       "віднестИ", "вІрші", "вітчИм",
                       "глядАч", "горошИна", "граблІ", "гуртОжиток",
                       "данИна", "дАно", "децимЕтр", "джерелО", "діалОг", "добовИй", "добУток", "довезтИ", "довІдник",
@@ -33,35 +28,14 @@ words_list_default = ["алфАвІт",
                       "украЇнський", "уподОбання", "урочИстий", "усерЕдині",
                       "фартУх", "фаховИй", "фенОмен", "фОльга", "фОрзац",
                       "хАОс",
-                      "цАрина", "цЕнтнер", "ціннИк", "чарівнИй", "черговИй", "читАння", "чорнОзем", "чорнОслив",
-                      "чотирнАдцять", "шовкОвий", "щЕлепа", "щИпці",
+                      "цАрина", "цЕнтнер", "ціннИк",
+                      "чарівнИй", "черговИй", "читАння", "чорнОзем", "чорнОслив",
+                      "чотирнАдцять",
+                      "шовкОвий",
+                      "щЕлепа", "щИпці",
                       "ярмаркОвий"]
 
 words_list = words_list_default
-
-# if os.path.exists(word_list_file):
-#     try:
-#         with open(word_list_file, "r", encoding="utf-8") as f:
-#             content = f.read()
-#         if content.strip():
-#              words_list = [w.strip().strip('"') for w in content.split(",") if w.strip()]
-#         else:
-#              # If file is empty, use default list and write it
-#              words_list = words_list_default
-#              with open(word_list_file, 'w', encoding='utf-8') as f:
-#                 f.write(", ".join([f'"{w}"' for w in words_list]))
-#     except Exception as e:
-#         print(f"Error reading word list file: {e}. Using default list.")
-#         words_list = words_list_default
-#         try:
-#             with open(word_list_file, 'w', encoding='utf-8') as f:
-#                 f.write(", ".join([f'"{w}"' for w in words_list]))
-#         except Exception as write_e:
-#             print(f"Error writing default word list file: {write_e}")
-#
-# else:
-#     with open(word_list_file, 'w', encoding='utf-8') as f:
-#         f.write(", ".join([f'"{w}"' for w in words_list]))
 
 MAX_WORD_LENGTH = max((len(word) for word in words_list), default=1)
 
